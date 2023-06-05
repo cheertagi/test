@@ -14,11 +14,6 @@
     />
 
     <style>
-      /* 
-      MAIN COLOR: #087f5b
-      GREY COLOR: #343a40
-      */
-
       * {
         margin: 0;
         padding: 0;
@@ -30,9 +25,10 @@
         line-height: 1;
       }
 
+      /*ACCORDION*/
       .accordion {
         width: 700px;
-        margin: 100px auto;
+        margin: 200px auto;
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -99,6 +95,135 @@
       .open .text {
         color: #087f5b;
       }
+      /*ACCORDION*/
+
+      /*CAROUSEL*/
+      .carousel {
+        background-color: #9bf6ff;
+        width: 800px;
+        margin: 200px auto;
+        padding: 32px;
+        padding-left: 86px;
+        padding-right: 48px;
+        color: #868e96;
+        border-radius: 8px;
+        position: relative;
+        /*FLEX*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 86px;
+      }
+
+      img {
+        height: 200px;
+        transform: scale(1.5);
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-icon {
+        stroke: #9bf6ff;
+        width: 24px;
+        height: 24px;
+      }
+
+      .btn-left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .quote-text {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 32px;
+      }
+
+      .quote-author {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+
+      .quote-job {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+        display: flex;
+        gap: 20px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #343a40;
+        border-radius: 50%;
+      }
+
+      .dot-filled {
+        background-color: #343a40;
+      }
+      /*CAROUSEL*/
+
+      /*TABLE*/
+      table {
+        width: 800px;
+        margin: 200px auto;
+        /*border: 1px solid #343a40;*/
+        font-size: 16px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        text-align: left;
+        /*border: 1px solid #343a40;*/
+        padding: 16px 24px;
+        width: 25%;
+      }
+
+      thead th {
+        background-color: #087f5b;
+        color: #fff;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #dee2e6;
+      }
+      /*TABLE*/
     </style>
   </head>
   <body>
@@ -127,7 +252,8 @@
             collected, organized, and analyzed with the help of tools and
             technologies such as data visualization and machine learning. The
             insights gained from incorporating essential data can lead to
-            increased revenue, improved customer satisfaction.
+            increased revenue, improved customer satisfaction, and streamlined
+            operations.
           </p>
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
@@ -139,7 +265,7 @@
       </div>
       <div class="item open">
         <p class="number">02</p>
-        <p class="text">INCORPORATE THE ESSENTIAL DATA</p>
+        <p class="text">INCORPORATE THE ESSENTIAL data1</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -208,5 +334,91 @@
         </div>
       </div>
     </div>
+    <div class="carousel">
+      <img src="curry.png" alt="curry" />
+      <blockquote class="quote">
+        <p class="quote-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam enim
+          laboriosam voluptatibus nisi rem incidunt cum, optio odio mollitia
+          nemo fuga, quam sequi eveniet vero atque. Velit rerum id voluptatum.
+        </p>
+        <p class="quote-author">Curry</p>
+        <p class="quote-job">NBA Player</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot">&nbsp;</button>
+        <button class="dot dot-filled">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+    <table>
+        <thead>
+          <tr>
+            <th>Chair</td>
+            <th>The Laid Back</td>
+            <th>The Worker Bee</td>
+            <th>The Chair 4/2</td>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Width</td>
+          <td>80cm</td>
+          <td>60cm</td>
+          <td>220cm</td>
+        </tr>
+        <tr>
+          <th>Height</td>
+          <td>100cm</td>
+          <td>110cm</td>
+          <td>90cm</td>
+        </tr>
+        <tr>
+          <th>Depth</td>
+          <td>70cm</td>
+          <td>65cm</td>
+          <td>80cm</td>
+        </tr>
+        <tr>
+          <th>Weight</td>
+          <td>16kg</td>
+          <td>22kg</td>
+          <td>80kg</td>
+        </tr>
+      </tbody>
+      </table>
   </body>
 </html>
